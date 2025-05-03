@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" />
 	  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
     <!-- end leaflet -->
-    <title>Angkotin</title>
+    <title>Cicilan</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
 </head>
@@ -23,10 +23,10 @@
           <?php 
            session_start();
            if (isset($_SESSION['login'])) {
-            echo "<a class='navbar-brand' href=''>Angkotin Yuk</a>";
+            echo "<a class='navbar-brand' href=''>Cicilan</a>";
           }
           else if(!isset($_SESSION['login'])) {
-            echo "<a class='navbar-brand' href='index.html'>Angkotin Yuk</a>";
+            echo "<a class='navbar-brand' href='index.php'>Cicilan</a>";
           }
           ?>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -38,7 +38,7 @@
                     echo "<a class='nav-link active' aria-current='page' href=''> Logged As : " . $_SESSION['username'] . "</a>";
                 }
                 else if(!isset($_SESSION['login'])) {
-                    echo "<a class='nav-link active' aria-current='page' href='index.php'>Home</a>";
+                    echo "<a class='nav-link active' aria-current='page' href='index.php'>Cicilan</a>";
                 }
                 ?>
               </li>
@@ -48,6 +48,7 @@
                   echo "<a class='nav-link active' aria-current='page' href='dashboard.php'>Admin Dashboard</a>";
                 }
                 ?>
+                <a class='nav-link active' aria-current='page' href='read_kontrak.php'>Daftar Kontrak</a>
               </li>
               <li class="nav-item">
               </li>
